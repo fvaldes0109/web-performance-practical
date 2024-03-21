@@ -11,3 +11,5 @@
 
 - Preload render blocking resources like fonts and styles
 - All images were converted to .webp
+- Add vite for bundling and minification
+- Resources like JQuery and Bootstrap are now served from a CDN
