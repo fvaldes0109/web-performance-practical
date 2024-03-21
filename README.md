@@ -6,3 +6,8 @@
 - Unused JS and CSS should be reduced
 - Minify CSS and JS
 - Properly size and compress images
+
+## Solved
+
+- Preload render blocking resources like fonts and styles
+- All images were converted to .webp
