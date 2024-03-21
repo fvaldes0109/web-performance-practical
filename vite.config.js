@@ -19,10 +19,35 @@ const noAttr = () => {
   };
 };
 
+const addWebVitals = () => {
+  return {
+    name: "add-web-vitals",
+    transformIndexHtml(html) {
+      return html.replace(
+        /<\/body>/,
+        `<script type="module">
+        import {onCLS, onFID, onLCP} from 'https://unpkg.com/web-vitals@3?module';
+      
+        function sendToAnalytics(metric) {
+          const body = JSON.stringify(metric);
+          (navigator.sendBeacon && navigator.sendBeacon('https://httpbin.org/status/200', body)) ||
+            fetch('https://httpbin.org/status/200', {body, method: 'POST', keepalive: true});
+        }
+        
+        onCLS(sendToAnalytics);
+        onFID(sendToAnalytics);
+        onLCP(sendToAnalytics);
+      </script></head>`
+      );
+    }
+  };
+}
+
 export default defineConfig({
   plugins: [
     moduleToJs(),
     noAttr(),
+    addWebVitals(),
   ],
   base: './',
   build: {
