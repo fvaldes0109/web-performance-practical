@@ -1,6 +1,7 @@
 ## Initial Lightouse Diagnostic
 
-- Largest Contentful Paint: 2,320s (Probably due to the video and images)
+- Largest Contentful Paint takes too long (Probably due to the video on index and images)
+- Render blocking resources should be optimized and deferred if possible
 - Images should be served in other formats
 - Unused JS and CSS should be reduced
 - Minify CSS and JS
