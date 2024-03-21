@@ -61,3 +61,6 @@ npm run build-and-report
 
 - You can run a bunde analysis by running `npx vite bundle-visualizer`
 - `web-vitals` is installed and added to production. A dummy endpoint is used to log the metrics (httpbin.org)
+- Lighthouse plugin was also added to Netlify to run a diagnostic on every deploy. Here you can see the [latest report](./showcase/netlify-lighthouse.html)
+
+![Report screenshot](./showcase/report-screenshot.png)
