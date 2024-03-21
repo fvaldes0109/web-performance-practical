@@ -36,11 +36,11 @@ export default defineConfig({
         newsDetail: path.resolve(__dirname, 'news-detail.html'),
         // Add other pages here
       },
-    //   output: {
-    //     entryFileNames: '[name].js',
-    //     chunkFileNames: '[name].js',
-    //     assetFileNames: '[name].[ext]',
-    //   }
+      output: {
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]',
+      }
     }
   }
 });
