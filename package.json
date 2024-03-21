@@ -17,5 +17,8 @@
     "vite": "^5.1.6",
     "vite-bundle-visualizer": "^1.1.0",
     "vite-plugin-compression": "^0.5.1"
+  },
+  "dependencies": {
+    "web-vitals": "^3.5.2"
   }
 }
