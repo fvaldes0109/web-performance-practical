@@ -1,0 +1,8 @@
+{
+    "name": "Crispy Kitchen",
+    "short_name": "Crispy Kitchen",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "description": "Crispy Kitchen is a web app that helps you navigate our restaurant menu and make reservations."
+}  
