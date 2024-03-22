@@ -1,5 +1,16 @@
 # Web Performance Practice
 
+## Friday Practice Session
+
+### Features added
+
+3. Setup local https
+4. Add manifest.json
+6. Add geolocation banner
+8. Add online offline detection banner (works automatically without the need to refresh the page)
+9. Add push notification after 15 seconds in a page
+10. Showing the city name in the banner with a geolocation API
+
 ## Hosting
 
 This site is hosted on Netlify, you can access it [here](https://main--leafy-zuccutto-d6c3de.netlify.app/)
