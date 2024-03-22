@@ -874,3 +874,15 @@ strong {
   }
 }
 
+.fixed-banner {
+  position: fixed; /* Fixed positioning to make it always visible */
+  top: 50%; /* Start at the middle of the page vertically */
+  right: 0; /* Align to the right side of the page */
+  transform: translateY(-50%); /* Adjust the positioning to truly center it vertically */
+  z-index: 1050; /* Ensure it's above most other elements (Bootstrap's modal is 1050) */
+  width: 200px; /* Set the width of the banner */
+  background-color: #fff; /* Background color */
+  box-shadow: 0 0 5px rgba(0,0,0,.5); /* Optional: Adds a shadow for better visibility */
+  padding: 10px; /* Padding inside the banner */
+  text-align: center; /* Center the text inside the banner */
+}

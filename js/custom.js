@@ -26,7 +26,8 @@ const load = () => {
   
   updateBanner();
   const geoText = document.querySelector('.geo-text');
-  
+  const fixedBanner = document.querySelector('.fixed-banner');
+
   if (geoText && navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&localityLanguage=en`)
@@ -36,6 +37,10 @@ const load = () => {
           geoText.textContent = 'Hey! We also deliver to ' + data.city;
         });
     });
+  }
+
+  if (fixedBanner) {
+    setTimeout(() => fixedBanner.classList.remove('invisible'), 15000);
   }
 }
 
