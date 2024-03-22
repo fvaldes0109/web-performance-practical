@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite';
+import basicSsl from '@vitejs/plugin-basic-ssl'
 import path from 'path';
+import fs from 'fs';
 
 const moduleToJs = () => {
   return {
@@ -43,12 +45,29 @@ const addWebVitals = () => {
   };
 }
 
+const certFile = path.resolve(__dirname, 'certificates/server.crt');
+const keyFile = path.resolve(__dirname, 'certificates/server.key');
+
 export default defineConfig({
   plugins: [
     moduleToJs(),
     noAttr(),
     addWebVitals(),
+    basicSsl({
+      /** name of certification */
+      name: 'test',
+      /** custom trust domains */
+      domains: ['*.custom.com'],
+      /** custom certification directory */
+      certDir: './certificates',
+    })
   ],
+  server: {
+    https: {
+      cert: fs.readFileSync(certFile),
+      key: fs.readFileSync(keyFile),
+    },
+  },
   base: './',
   build: {
     rollupOptions: {
