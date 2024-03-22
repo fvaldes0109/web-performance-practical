@@ -10,9 +10,21 @@
     
   })(window.jQuery);
 
+const updateBanner = () => {
+  
+  const banner = document.querySelector('.status-banner');
+  if (banner) {
+    if (navigator.onLine) {
+      banner.classList.add('invisible');
+    } else {
+      banner.classList.remove('invisible');
+    }
+  }
+}
   
 const load = () => {
-    
+  
+  updateBanner();
   const geoText = document.querySelector('.geo-text');
 
   if (geoText && navigator.geolocation) {
@@ -27,3 +39,6 @@ const load = () => {
 }
 
 document.addEventListener('DOMContentLoaded', load);
+
+window.addEventListener('online', updateBanner);
+window.addEventListener('offline', updateBanner);
