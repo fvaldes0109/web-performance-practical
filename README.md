@@ -1,29 +1,9 @@
-# Web Performance Practice
-
-## Hosting
-
-This site is hosted on Netlify, you can access it [here](https://main--leafy-zuccutto-d6c3de.netlify.app/)
-
-## Initial Lightouse Diagnostic
-
-- Largest Contentful Paint takes too long (Probably due to the video on index and images)
-- Render blocking resources should be optimized and deferred if possible
-- Images should be served in other formats, like webp
-- Unused JS and CSS should be reduced
-- CSS and JS is not minified
-- Some scripts and styles are being served locally
-
-## Solved
-
-- Preload render blocking resources like fonts and styles
-- All images were converted to .webp and compressed
-- Add vite for bundling and minification
-- Resources like JQuery and Bootstrap are now served from a CDN
+# Web Performance Practice #10
 
 ## Requirements
 
 - An installed version of Node.js
-- Lightouse CLI installed globally (`npm install -g lighthouse`)
+- pm2 installed globally (`npm install -g pm2`). May require using `sudo` depending on your system.
 
 ## How to run
 
@@ -39,28 +19,27 @@ Then, run the development server:
 npm run dev
 ```
 
-To run a Lighthouse diagnostic, run:
-
-```bash
-lightouse http://localhost:5173
-```
-
 To generate a production build, run:
 
 ```bash
 npm run build
 ```
 
-To generate a build and a lighthouse report, run:
+To run the production server, run:
 
 ```bash
-npm run build-and-report
+npm run start
 ```
 
-## Other notes
+## Tasks
 
-- You can run a bunde analysis by running `npx vite bundle-visualizer`
-- `web-vitals` is installed and added to production. A dummy endpoint is used to log the metrics (httpbin.org)
-- Lighthouse plugin was also added to Netlify to run a diagnostic on every deploy. Here you can see the [latest report](./showcase/netlify-lighthouse.html)
+All the requirements are implemented. You can see the _express_ server configuration in the `./server/app.js` file. The server is configured to serve the static files from the `dist` directory and to listen on port 3000. Also, the data from the reservation form is being stored in a SQLite database that will be automatically created in `./db/sqlite.db`.
 
-![Report screenshot](./showcase/report-screenshot.png)
+## pm2 commands
+
+Once you have installed pm2, you can use the following commands to manage the server:
+
+- Start the server: `npm run pm2-start`
+- Reload the server: `npm run pm2-reload`
+- Stop the server: `npm run pm2-stop`
+- Delete the server: `npm run pm2-delete`

@@ -4,14 +4,14 @@ const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 const path = require('path');
 
-const dbPath = path.join('db', 'reservations.db');
+const dbPath = path.join('db', 'sqlite.db');
 const dbDir = path.dirname(dbPath);
 
 if (!fs.existsSync(dbDir)){
   fs.mkdirSync(dbDir, { recursive: true });
 }
 
-const db = new sqlite3.Database('./db/reservations.db');
+const db = new sqlite3.Database('./db/sqlite.db');
 
 db.serialize(() => {
   db.run('CREATE TABLE IF NOT EXISTS reservations (name TEXT, email TEXT, phone TEXT, people INTEGER, date TEXT, time TEXT, message TEXT)');
