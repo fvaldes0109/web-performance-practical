@@ -39,28 +39,11 @@ Then, run the development server:
 npm run dev
 ```
 
-To run a Lighthouse diagnostic, run:
+## Assignement tasks
 
-```bash
-lightouse http://localhost:5173
-```
-
-To generate a production build, run:
-
-```bash
-npm run build
-```
-
-To generate a build and a lighthouse report, run:
-
-```bash
-npm run build-and-report
-```
-
-## Other notes
-
-- You can run a bunde analysis by running `npx vite bundle-visualizer`
-- `web-vitals` is installed and added to production. A dummy endpoint is used to log the metrics (httpbin.org)
-- Lighthouse plugin was also added to Netlify to run a diagnostic on every deploy. Here you can see the [latest report](./showcase/netlify-lighthouse.html)
-
-![Report screenshot](./showcase/report-screenshot.png)
+- Added routes and .tsx files for each page
+- The navbar, footer and reservation modal are now components
+- Special Menus images on the main page are now using the built-in Image component
+- Links in the navbar are now using the Link component
+- Publishing a reservation now calls the `/api/reserve` endpoint, which posts the data to a mock endpoint
+- Website is deployed to Vercel [here](https://web-performance-practical.vercel.app/)

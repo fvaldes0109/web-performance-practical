@@ -160,13 +160,13 @@ export default function Page() {
 
           <div className="video-wrap">
             <video
-              autoPlay={false}
+              autoPlay={true}
               loop={false}
               muted={false}
               className="custom-video"
               poster=""
             >
-              <source src="video/production_ID_3769033.mp4" type="video/mp4" />
+              <source src="/video/production_ID_3769033.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
