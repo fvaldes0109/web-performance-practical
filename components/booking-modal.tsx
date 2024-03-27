@@ -27,7 +27,7 @@ export default function BookingModal() {
                 <form
                   className="booking-form row"
                   role="form"
-                  action="#"
+                  action="/api/reserve"
                   method="post"
                 >
                   <div className="col-lg-6 col-12">
@@ -70,7 +70,6 @@ export default function BookingModal() {
                       type="telephone"
                       name="phone"
                       id="phone"
-                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                       className="form-control"
                       placeholder="123-456-7890"
                     />
