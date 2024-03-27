@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function Nav() {
   return (
@@ -8,9 +9,9 @@ export default function Nav() {
                 <span className="navbar-toggler-icon"></span>
             </button>
 
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" href="/">
                 Crispy Kitchen
-            </a>
+            </Link>
 
             <div className="d-lg-none">
                 <button type="button" className="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal">Reservation</button>
@@ -19,23 +20,23 @@ export default function Nav() {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav mx-auto">
                     <li className="nav-item">
-                        <a className="nav-link active" href="/">Home</a>
+                        <Link className="nav-link active" href="/">Home</Link>
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="/about">Story</a>
+                        <Link className="nav-link" href="/about">Story</Link>
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="/menu">Menu</a>
+                        <Link className="nav-link" href="/menu">Menu</Link>
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="/news">Our Updates</a>
+                        <Link className="nav-link" href="/news">Our Updates</Link>
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="/contact">Contact</a>
+                        <Link className="nav-link" href="/contact">Contact</Link>
                     </li>
                 </ul>
             </div>
