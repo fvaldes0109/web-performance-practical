@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 import BookingModal from "../components/booking-modal";
+import Image from 'next/image'
 
 export default function Page() {
   return (
@@ -183,8 +184,10 @@ export default function Page() {
               <div className="col-lg-4 col-md-6 col-12">
                 <div className="menu-thumb">
                   <div className="menu-image-wrap">
-                    <img
-                      src="images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.webp"
+                    <Image
+                      width={10000}
+                      height={10000}
+                      src="/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.webp"
                       className="img-fluid menu-image"
                       alt=""
                     />
@@ -219,8 +222,10 @@ export default function Page() {
               <div className="col-lg-4 col-md-6 col-12">
                 <div className="menu-thumb">
                   <div className="menu-image-wrap">
-                    <img
-                      src="images/lunch/farhad-ibrahimzade-MGKqxm6u2bc-unsplash.webp"
+                  <Image
+                      width={10000}
+                      height={10000}
+                      src="/images/lunch/farhad-ibrahimzade-MGKqxm6u2bc-unsplash.webp"
                       className="img-fluid menu-image"
                       alt=""
                     />
@@ -255,8 +260,10 @@ export default function Page() {
               <div className="col-lg-4 col-md-6 col-12">
                 <div className="menu-thumb">
                   <div className="menu-image-wrap">
-                    <img
-                      src="images/dinner/keriliwi-c3mFafsFz2w-unsplash.webp"
+                  <Image
+                      width={10000}
+                      height={10000}
+                      src="/images/dinner/keriliwi-c3mFafsFz2w-unsplash.webp"
                       className="img-fluid menu-image"
                       alt=""
                     />
@@ -295,8 +302,10 @@ export default function Page() {
               <div className="col-lg-4 col-md-6 col-12">
                 <div className="menu-thumb">
                   <div className="menu-image-wrap">
-                    <img
-                      src="images/dinner/farhad-ibrahimzade-ZipYER3NLhY-unsplash.webp"
+                  <Image
+                      width={10000}
+                      height={10000}
+                      src="/images/dinner/farhad-ibrahimzade-ZipYER3NLhY-unsplash.webp"
                       className="img-fluid menu-image"
                       alt=""
                     />
@@ -335,8 +344,10 @@ export default function Page() {
               <div className="col-lg-4 col-md-6 col-12">
                 <div className="menu-thumb">
                   <div className="menu-image-wrap">
-                    <img
-                      src="images/breakfast/louis-hansel-dphM2U1xq0U-unsplash.webp"
+                  <Image
+                      width={10000}
+                      height={10000}
+                      src="/images/breakfast/louis-hansel-dphM2U1xq0U-unsplash.webp"
                       className="img-fluid menu-image"
                       alt=""
                     />
@@ -371,8 +382,10 @@ export default function Page() {
               <div className="col-lg-4 col-md-6 col-12">
                 <div className="menu-thumb">
                   <div className="menu-image-wrap">
-                    <img
-                      src="images/lunch/farhad-ibrahimzade-D5c9ZciQy_I-unsplash.webp"
+                  <Image
+                      width={10000}
+                      height={10000}
+                      src="/images/lunch/farhad-ibrahimzade-D5c9ZciQy_I-unsplash.webp"
                       className="img-fluid menu-image"
                       alt=""
                     />
