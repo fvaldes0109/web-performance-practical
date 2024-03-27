@@ -8,7 +8,7 @@ export default function handler(req, res) {
       method: 'POST',
       body: JSON.stringify(data),
   }).then(() => {
-    res.redirect(200, '/');
+    res.status(200).json({ status: 'success' });
   }).catch((error) => {
     console.error('Error:', error);
     res.status(500).json({ status: 'error' });
