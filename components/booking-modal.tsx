@@ -98,7 +98,6 @@ export default function BookingModal() {
                       type="date"
                       name="date"
                       id="date"
-                      value=""
                       className="form-control"
                     />
                   </div>
@@ -112,8 +111,9 @@ export default function BookingModal() {
                       className="form-select form-control"
                       name="time"
                       id="time"
+                      defaultValue="5"
                     >
-                      <option value="5" selected>
+                      <option value="5">
                         5:00 PM
                       </option>
                       <option value="6">6:00 PM</option>
