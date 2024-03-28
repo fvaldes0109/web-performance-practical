@@ -74,74 +74,77 @@ export default function SearchPage() {
         </div>
       </div>
 
-      <div className="container">
-        <div className="row">
-          {cocktails.map(cocktail => (
-            <div key={cocktail.idDrink} className="col-md-4">
-              <div className="card mb-4">
-                <img
-                  src={cocktail.strDrinkThumb}
-                  className="card-img-top"
-                  alt={cocktail.strDrink}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{cocktail.strDrink}</h5>
-                  <ul className="list-group list-group-flush">
-                    {cocktail.strIngredient1 && <li className="list-group-item">
-                      {cocktail.strIngredient1} {cocktail.strMeasure1}
-                    </li>}
-                    {cocktail.strIngredient2 && <li className="list-group-item">
-                      {cocktail.strIngredient2} {cocktail.strMeasure2}
-                    </li>}
-                    {cocktail.strIngredient3 && <li className="list-group-item">
-                      {cocktail.strIngredient3} {cocktail.strMeasure3}
-                    </li>}
-                    {cocktail.strIngredient4 && <li className="list-group-item">
-                      {cocktail.strIngredient4} {cocktail.strMeasure4}
-                    </li>}
-                    {cocktail.strIngredient5 && <li className="list-group-item">
-                      {cocktail.strIngredient5} {cocktail.strMeasure5}
-                    </li>}
-                    {cocktail.strIngredient6 && <li className="list-group-item">
-                      {cocktail.strIngredient6} {cocktail.strMeasure6}
-                    </li>}
-                    {cocktail.strIngredient7 && <li className="list-group-item">
-                      {cocktail.strIngredient7} {cocktail.strMeasure7}
-                    </li>}
-                    {cocktail.strIngredient8 && <li className="list-group-item">
-                      {cocktail.strIngredient8} {cocktail.strMeasure8}
-                    </li>}
-                    {cocktail.strIngredient9 && <li className="list-group-item">
-                      {cocktail.strIngredient9} {cocktail.strMeasure9}
-                    </li>}
-                    {cocktail.strIngredient10 && <li className="list-group-item">
-                      {cocktail.strIngredient10} {cocktail.strMeasure10}
-                    </li>}
-                    {cocktail.strIngredient11 && <li className="list-group-item">
-                      {cocktail.strIngredient11} {cocktail.strMeasure11}
-                    </li>}
-                    {cocktail.strIngredient12 && <li className="list-group-item">
-                      {cocktail.strIngredient12} {cocktail.strMeasure12}
-                    </li>}
-                    {cocktail.strIngredient13 && <li className="list-group-item">
-                      {cocktail.strIngredient13} {cocktail.strMeasure13}
-                    </li>}
-                    {cocktail.strIngredient14 && <li className="list-group-item">
-                      {cocktail.strIngredient14} {cocktail.strMeasure14}
-                    </li>}
-                    {cocktail.strIngredient15 && <li className="list-group-item">
-                      {cocktail.strIngredient15} {cocktail.strMeasure15}
-                    </li>}
-                  </ul>
-                  <p className="card-text">
-                    {cocktail.strInstructions}
-                  </p>
+      {cocktails && (
+        
+        <div className="container">
+          <div className="row">
+            {cocktails.map(cocktail => (
+              <div key={cocktail.idDrink} className="col-md-4">
+                <div className="card mb-4">
+                  <img
+                    src={cocktail.strDrinkThumb}
+                    className="card-img-top"
+                    alt={cocktail.strDrink}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{cocktail.strDrink}</h5>
+                    <ul className="list-group list-group-flush">
+                      {cocktail.strIngredient1 && <li className="list-group-item">
+                        {cocktail.strIngredient1} {cocktail.strMeasure1}
+                      </li>}
+                      {cocktail.strIngredient2 && <li className="list-group-item">
+                        {cocktail.strIngredient2} {cocktail.strMeasure2}
+                      </li>}
+                      {cocktail.strIngredient3 && <li className="list-group-item">
+                        {cocktail.strIngredient3} {cocktail.strMeasure3}
+                      </li>}
+                      {cocktail.strIngredient4 && <li className="list-group-item">
+                        {cocktail.strIngredient4} {cocktail.strMeasure4}
+                      </li>}
+                      {cocktail.strIngredient5 && <li className="list-group-item">
+                        {cocktail.strIngredient5} {cocktail.strMeasure5}
+                      </li>}
+                      {cocktail.strIngredient6 && <li className="list-group-item">
+                        {cocktail.strIngredient6} {cocktail.strMeasure6}
+                      </li>}
+                      {cocktail.strIngredient7 && <li className="list-group-item">
+                        {cocktail.strIngredient7} {cocktail.strMeasure7}
+                      </li>}
+                      {cocktail.strIngredient8 && <li className="list-group-item">
+                        {cocktail.strIngredient8} {cocktail.strMeasure8}
+                      </li>}
+                      {cocktail.strIngredient9 && <li className="list-group-item">
+                        {cocktail.strIngredient9} {cocktail.strMeasure9}
+                      </li>}
+                      {cocktail.strIngredient10 && <li className="list-group-item">
+                        {cocktail.strIngredient10} {cocktail.strMeasure10}
+                      </li>}
+                      {cocktail.strIngredient11 && <li className="list-group-item">
+                        {cocktail.strIngredient11} {cocktail.strMeasure11}
+                      </li>}
+                      {cocktail.strIngredient12 && <li className="list-group-item">
+                        {cocktail.strIngredient12} {cocktail.strMeasure12}
+                      </li>}
+                      {cocktail.strIngredient13 && <li className="list-group-item">
+                        {cocktail.strIngredient13} {cocktail.strMeasure13}
+                      </li>}
+                      {cocktail.strIngredient14 && <li className="list-group-item">
+                        {cocktail.strIngredient14} {cocktail.strMeasure14}
+                      </li>}
+                      {cocktail.strIngredient15 && <li className="list-group-item">
+                        {cocktail.strIngredient15} {cocktail.strMeasure15}
+                      </li>}
+                    </ul>
+                    <p className="card-text">
+                      {cocktail.strInstructions}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
