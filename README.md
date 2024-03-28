@@ -41,9 +41,8 @@ npm run dev
 
 ## Assignement tasks
 
-- Added routes and .tsx files for each page
-- The navbar, footer and reservation modal are now components
-- Special Menus images on the main page are now using the built-in Image component
-- Links in the navbar are now using the Link component
-- Publishing a reservation now calls the `/api/reserve` endpoint, which posts the data to a mock endpoint
-- Website is deployed to Vercel [here](https://web-performance-practical.vercel.app/)
+- Add cocktail page
+- Add API call + search field + display results
+- Display cocktail name, photo, ingredients and instructions
+- Add custom 404 and 500 error pages
+- Integrate error logging with sentry
